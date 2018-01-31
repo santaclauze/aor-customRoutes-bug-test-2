@@ -8,7 +8,7 @@ import jsonRestClient from 'aor-json-rest-client';
 import frenchMessages from 'aor-language-french';
 
 import addUploadFeature from './addUploadFeature';
-
+import customRoutes from './customRoutes';
 import { PostList, PostCreate, PostEdit, PostShow, PostIcon } from './posts';
 import {
     CommentList,
@@ -42,6 +42,7 @@ render(
     <Admin
         authClient={authClient}
         restClient={delayedRestClient}
+        customRoutes={customRoutes}
         title="Example Admin"
         locale="en"
         messages={messages}
@@ -49,7 +50,7 @@ render(
         {permissions => [
             <Resource
                 name="posts"
-                list={PostList}
+                // list={PostList}
                 create={PostCreate}
                 edit={PostEdit}
                 show={PostShow}

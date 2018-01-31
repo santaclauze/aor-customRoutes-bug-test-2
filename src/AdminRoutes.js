@@ -14,6 +14,7 @@ import getMissingAuthClientError from './util/getMissingAuthClientError';
 
 export class AdminRoutes extends Component {
     componentDidMount() {
+        console.log('test')
         this.initializeResources(this.props.children);
     }
 
@@ -46,6 +47,8 @@ export class AdminRoutes extends Component {
             dashboard,
             catchAll,
         } = this.props;
+        console.log(resources, 'test')
+
         return (
             <Switch>
                 {customRoutes &&

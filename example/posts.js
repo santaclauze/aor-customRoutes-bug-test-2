@@ -80,6 +80,7 @@ const titleFieldStyle = {
 };
 export const PostList = ({ ...props }) => (
     <List
+        source="posts"
         {...props}
         filters={<PostFilter />}
         sort={{ field: 'published_at', order: 'DESC' }}

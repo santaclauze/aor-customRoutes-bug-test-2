@@ -31,7 +31,7 @@ const CrudRoute = ({ resource, list, create, edit, show, remove, options }) => {
                     exact
                     path={`/${resource}`}
                     render={restrictPage(list, 'list')}
-                />
+                >{console.log("TESSSSSSSSSSSSSSST")}</Route>
             )}
             {create && (
                 <Route

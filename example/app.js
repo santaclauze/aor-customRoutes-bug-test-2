@@ -48,19 +48,13 @@ render(
         locale="en"
         messages={messages}
         customRoutes={[
-            <Route
-                exact
-                path="/custom"
-                component={CustomRouteNoLayout}
-                noLayout
-            />,
-            <Route exact path="/custom2" component={CustomRouteLayout} />,
+            <Route path="/posts/" component={PostList} />,
+            <Route path="/users/" component={UserList} />,
         ]}
     >
         {permissions => [
             <Resource
                 name="posts"
-                list={PostList}
                 create={PostCreate}
                 edit={PostEdit}
                 show={PostShow}
@@ -79,7 +73,6 @@ render(
             permissions ? (
                 <Resource
                     name="users"
-                    list={UserList}
                     create={UserCreate}
                     edit={UserEdit}
                     remove={Delete}

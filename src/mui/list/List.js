@@ -378,7 +378,10 @@ const getQuery = createSelector(getLocationSearch, locationSearch => {
 });
 
 function mapStateToProps(state, props) {
+    console.log(state, 'LIST state')
+    console.log(state.admin.resources, 'LIST state.admin.resources')
     const resourceState = state.admin.resources[props.resource];
+    console.log(resourceState, 'LIST resourceState')
     return {
         query: getQuery(props),
         params: resourceState.list.params,

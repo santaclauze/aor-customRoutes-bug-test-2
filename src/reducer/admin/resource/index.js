@@ -10,6 +10,7 @@ export default (
     dataReducer = data,
     listReducer = list
 ) => {
+    console.log(action, 'REDUCER ACTIONS')
     if (action.type === DECLARE_RESOURCES) {
         const newState = action.payload.reduce(
             (acc, resource) => ({

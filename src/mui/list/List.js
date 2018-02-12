@@ -158,6 +158,7 @@ export class List extends Component {
     }
 
     updateData(query) {
+        console.log('LIST UPDATE')
         const params = query || this.getQuery();
         const { sort, order, page = 1, perPage, filter } = params;
         const pagination = {
@@ -235,7 +236,7 @@ export class List extends Component {
             theme,
             version,
         } = this.props;
-
+        console.log(isLoading, 'isLoading RTENDER LSIT')
         const query = this.getQuery();
         const filterValues = query.filter;
         const basePath = this.getBasePath();
@@ -381,6 +382,8 @@ const getQuery = createSelector(getLocationSearch, locationSearch => {
 });
 
 function mapStateToProps(state, props) {
+    console.log(state, 'state LSIT')
+
     const resourceState = state.admin.resources[props.resource];
     return {
         query: getQuery(props),

@@ -116,6 +116,8 @@ export const PostList = props => (
         actions={<PostActions />}
         filters={<PostFilter />}
         sort={{ field: 'published_at', order: 'DESC' }}
+        resource="posts"
+        hasCreate={false}
     >
         <Responsive
             small={

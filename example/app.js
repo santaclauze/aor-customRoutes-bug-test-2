@@ -54,13 +54,12 @@ render(
                 component={CustomRouteNoLayout}
                 noLayout
             />,
-            <Route exact path="/custom2" component={CustomRouteLayout} />,
+            <Route exact path="/posts" render={PostList} />,
         ]}
     >
         {permissions => [
             <Resource
                 name="posts"
-                list={PostList}
                 create={PostCreate}
                 edit={PostEdit}
                 show={PostShow}

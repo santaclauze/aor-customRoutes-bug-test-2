@@ -28,6 +28,7 @@ export class AdminRoutes extends Component {
                 const resources = children(permissions)
                     .filter(node => node)
                     .map(node => node.props);
+                console.log(resources, 'resources INTIALISE 1')
                 this.props.declareResources(resources);
             });
         } else {
@@ -36,6 +37,7 @@ export class AdminRoutes extends Component {
                     children,
                     child => (child ? child.props : false)
                 ) || [];
+            console.log(resources, 'resources INTIALISE 2')
             this.props.declareResources(resources.filter(r => r));
         }
     }

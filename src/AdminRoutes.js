@@ -117,7 +117,7 @@ export class AdminRoutes extends Component {
                                                     show={resource.show}
                                                     remove={resource.remove}
                                                     options={resource.options}
-                                                />
+                                                >{console.log(resource, 'ressiyycecee AR')}</CrudRoute>
                                             )}
                                         />
                                     ))}

@@ -112,6 +112,7 @@ const PostActions = ({
 
 export const PostList = props => (
     <List
+        source="posts"
         {...props}
         actions={<PostActions />}
         filters={<PostFilter />}

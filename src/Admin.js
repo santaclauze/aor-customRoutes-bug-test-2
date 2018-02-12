@@ -77,6 +77,7 @@ const Admin = ({
                                     })}
                             />
                         )}
+                        {console.log(children, 'children')}
                         <Route
                             path="/"
                             render={routeProps => (

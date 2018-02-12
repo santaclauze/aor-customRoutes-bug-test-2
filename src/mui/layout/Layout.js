@@ -109,6 +109,7 @@ class Layout extends Component {
                                     )
                                 }
                             >
+                                {console.log(children)}
                                 {children}
                             </div>
                             <Sidebar theme={theme}>
